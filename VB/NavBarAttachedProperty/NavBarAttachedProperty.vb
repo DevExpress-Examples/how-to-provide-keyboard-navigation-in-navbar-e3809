@@ -112,7 +112,7 @@ Namespace NavBarAttachedProperty
                 selectedGroup.IsExpanded = True
                 Return True
             End If
-            If e.Key = Key.Tab AndAlso (Not IsShiftPressed(e)) Then
+            If e.Key = Key.Tab AndAlso Not IsShiftPressed(e) Then
                 Dim currentGroup As NavBarGroup = TryCast(NavBar.SelectedGroup, NavBarGroup)
                 Dim currentGroupIndex = NavBar.Groups.IndexOf(currentGroup)
                 If currentGroupIndex < NavBar.Groups.Count - 1 Then
@@ -136,7 +136,7 @@ Namespace NavBarAttachedProperty
                     NavBar.SelectedGroup = NavBar.Groups(NavBar.Groups.Count - 1)
                 End If
                 currentGroup = TryCast(NavBar.SelectedGroup, NavBarGroup)
-                If currentGroup.Items.Count>0 Then
+                If currentGroup.Items.Count > 0 Then
                 NavBar.SelectedItem = currentGroup.Items(0)
                 End If
                 Return True
