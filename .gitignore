@@ -295,3 +295,7 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/CS/NavBarAttachedProperty/NavBarAttachedProperty.csproj.bak
+/CS/NavBarAttachedProperty.Example/NavBarAttachedProperty.Example.csproj.bak
+/VB/NavBarAttachedProperty/NavBarAttachedProperty.vbproj.bak
+/VB/NavBarAttachedProperty.Example/NavBarAttachedProperty.Example.vbproj.bak

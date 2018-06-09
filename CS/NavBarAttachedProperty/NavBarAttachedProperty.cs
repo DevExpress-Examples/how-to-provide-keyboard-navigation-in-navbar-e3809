@@ -1,28 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using DevExpress.Xpf.NavBar;
-using DevExpress.Xpf.Core.Native;
-using System.Globalization;
-using DevExpress.Xpf.Utils;
-using System.Windows.Interactivity;
-using DevExpress.Utils;
+﻿using DevExpress.Data.Extensions;
 using DevExpress.Xpf.Core;
+using DevExpress.Xpf.Core.Native;
 using DevExpress.Xpf.Editors.Helpers;
-using System.Diagnostics;
+using DevExpress.Xpf.NavBar;
+using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
+using System.Windows.Interactivity;
 
 namespace NavBarAttachedProperty {
-     public class MyConverter: IValueConverter {
+    public class MyConverter: IValueConverter {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             if ((bool)value)
                 return Visibility.Visible;

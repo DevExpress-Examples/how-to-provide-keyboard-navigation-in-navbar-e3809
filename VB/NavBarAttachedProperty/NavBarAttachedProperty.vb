@@ -1,29 +1,14 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Text
-Imports System.Windows
-Imports System.Windows.Controls
-Imports System.Windows.Data
-Imports System.Windows.Documents
-Imports System.Windows.Input
-Imports System.Windows.Media
-Imports System.Windows.Media.Imaging
-Imports System.Windows.Navigation
-Imports System.Windows.Shapes
-Imports DevExpress.Xpf.NavBar
-Imports DevExpress.Xpf.Core.Native
-Imports System.Globalization
-Imports DevExpress.Xpf.Utils
+﻿Imports System.Globalization
 Imports System.Windows.Interactivity
-Imports DevExpress.Utils
+Imports DevExpress.Data.Extensions
 Imports DevExpress.Xpf.Core
+Imports DevExpress.Xpf.Core.Native
 Imports DevExpress.Xpf.Editors.Helpers
-Imports System.Diagnostics
+Imports DevExpress.Xpf.NavBar
 
 Namespace NavBarAttachedProperty
-     Public Class MyConverter
-         Implements IValueConverter
+    Public Class MyConverter
+        Implements IValueConverter
 
         Public Function Convert(ByVal value As Object, ByVal targetType As Type, ByVal parameter As Object, ByVal culture As CultureInfo) As Object Implements IValueConverter.Convert
             If DirectCast(value, Boolean) Then
@@ -34,7 +19,7 @@ Namespace NavBarAttachedProperty
         Public Function ConvertBack(ByVal value As Object, ByVal targetType As Type, ByVal parameter As Object, ByVal culture As CultureInfo) As Object Implements IValueConverter.ConvertBack
             Return Nothing
         End Function
-     End Class
+    End Class
 
     Public Class NavBarKeyboardHelper
         Inherits Behavior(Of NavBarControl)
@@ -137,7 +122,7 @@ Namespace NavBarAttachedProperty
                 End If
                 currentGroup = TryCast(NavBar.SelectedGroup, NavBarGroup)
                 If currentGroup.Items.Count > 0 Then
-                NavBar.SelectedItem = currentGroup.Items(0)
+                    NavBar.SelectedItem = currentGroup.Items(0)
                 End If
                 Return True
             End If
