@@ -1,10 +1,14 @@
-﻿Imports System.Globalization
-Imports System.Windows.Interactivity
-Imports DevExpress.Data.Extensions
+﻿Imports DevExpress.Data.Extensions
 Imports DevExpress.Xpf.Core
 Imports DevExpress.Xpf.Core.Native
 Imports DevExpress.Xpf.Editors.Helpers
 Imports DevExpress.Xpf.NavBar
+Imports System
+Imports System.Globalization
+Imports System.Windows
+Imports System.Windows.Data
+Imports System.Windows.Input
+Imports System.Windows.Interactivity
 
 Namespace NavBarAttachedProperty
     Public Class MyConverter
@@ -122,7 +126,7 @@ Namespace NavBarAttachedProperty
                 End If
                 currentGroup = TryCast(NavBar.SelectedGroup, NavBarGroup)
                 If currentGroup.Items.Count > 0 Then
-                    NavBar.SelectedItem = currentGroup.Items(0)
+                NavBar.SelectedItem = currentGroup.Items(0)
                 End If
                 Return True
             End If
