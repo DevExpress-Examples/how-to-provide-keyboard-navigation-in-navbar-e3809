@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/NavBarAttachedProperty.Example/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/NavBarAttachedProperty.Example/MainWindow.xaml))
+* [NavBarAttachedProperty.cs](./CS/NavBarAttachedProperty/NavBarAttachedProperty.cs) (VB: [NavBarAttachedProperty.vbproj](./VB/NavBarAttachedProperty/NavBarAttachedProperty.vbproj))
+<!-- default file list end -->
 # How to provide keyboard navigation in NavBar
 
 
